@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Settings from './components/Settings';
+import ReactDOM from 'react-dom';
+import { Toaster } from 'react-hot-toast';
+import Main from './components/Main';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const { position } = useSelector(state => state.settings);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {ReactDOM.createPortal(<Toaster />, document.body)}
+      <div className={`App ${position === 'start' ? 'left_padding' : position === 'end' ? "right_padding" : ""}`}>
+        <Settings />
+        <Main />
+      </div>
+    </>
   );
 }
 

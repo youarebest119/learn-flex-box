@@ -1,0 +1,237 @@
+body {
+  font-family: 'Poppins';
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// Reset css
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+.form-label,
+.form-check-label,
+label {
+  margin-bottom: 0;
+}
+
+.form-label,
+.form-check-label {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+
+  .form-check-input {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .form-check-label {
+    margin-bottom: 0;
+    transform: translateY(1px);
+    margin-left: 1rem;
+  }
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+span,
+a {
+  display: inline-block;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+.form-control,
+.btn {
+  font-size: 1.6rem;
+}
+
+.selector {
+  .selector__control {
+    cursor: pointer;
+  }
+
+  .selector__menu {
+    &-list {
+      .selector__option {
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.App {
+  &.left_padding {
+    padding-left: 400px;
+  }
+
+  &.right_padding {
+    padding-right: 400px;
+  }
+}
+
+.settings_bar {
+  position: fixed;
+  background-color: #eee;
+  height: 100vh;
+  width: 100%;
+  max-width: 360px;
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem;
+
+    .position_dropdown {
+      .dropdown-toggle {
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+
+        &::after {
+          content: unset;
+        }
+
+        svg {
+          width: 2.4rem;
+
+          path {
+            fill: black;
+          }
+        }
+
+        &.show,
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+
+      .dropdown-menu {
+        .dropdown-item {
+          font-size: 1.6rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  &_body {
+    overflow: auto;
+    max-height: calc(100% - 66px);
+    height: 100%;
+
+    &_box {
+      padding: 0 20px;
+    }
+  }
+
+  &.top-0,
+  &.bottom-0 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+}
+
+// container
+._container {
+  background-color: #b6e8f5;
+
+  .child {
+    font-size: 3rem;
+    padding: 4rem;
+    position: relative;
+
+    .childProperties {
+      p {
+        font-size: 1rem;
+        color: white;
+      }
+    }
+
+    &:first-child {
+      background-color: #a0dae9;
+      font-size: 3rem;
+
+      .childProperties {
+        p {
+          color: black;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: #89bac7;
+      font-size: 3.4rem;
+
+      .childProperties {
+        p {
+          color: black;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: #74a0ac;
+      font-size: 3.8rem;
+    }
+
+    &:nth-child(4) {
+      background-color: #638b96;
+      font-size: 4.2rem;
+    }
+
+    &:last-child {
+      background-color: #587a83;
+      font-size: 4.6rem;
+    }
+  }
+}
